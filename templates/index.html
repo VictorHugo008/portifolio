@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Portfólio{% endblock %}
+
+{% block content %}
+<h1>Bem-vindo ao meu Portfólio!</h1>
+<p>Sou Victor, desenvolvedor apaixonado por tecnologia e inovação.</p>
+
+<div class="sobre-container">
+    <!-- Foto -->
+    <div class="foto">
+        <p><strong>Minha foto:</strong></p>
+        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Minha foto">
+    </div>
+
+    <!-- Texto Sobre Mim -->
+    <div class="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+            Tenho experiência em desenvolvimento web e gosto de criar projetos que unem
+            design impactante com código eficiente. Sou apaixonado por tecnologia, games
+            e sempre busco aprender coisas novas.
+        </p>
+        <h3><strong>Informações adicionais:</strong></h3>
+        <ul>
+            <li>💻 Habilidades: Python, Flask, HTML, CSS</li>
+            <li>🎮 Interesses: Games, tecnologia, cibersegurança</li>
+            <li>📍 Localização: Serra, Espírito Santo - Brasil</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
