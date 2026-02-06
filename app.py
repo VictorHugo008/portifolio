@@ -19,6 +19,7 @@ def contato():
 
 # Executa o servidor
 if __name__ == '__main__':
-   port = int(os.eviron.get("PORT", 5000))    
-    app.run(host="0.0.0.0" , port=port, debug=False)
+    port = int(os.eviron.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
+
 
