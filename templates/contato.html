@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 
+{% block title %}Contato - Operador Vitor{% endblock %}
+
 {% block content %}
-<div class="contato-wrapper">
-    <h1>SINAL_DE_CONTATO</h1>
+<section class="contato-container">
+    <h1 class="glitch-title">ENTRE EM CONTATO</h1>
     
-    <form method="post" class="form-contato">
-        <div class="campo-grupo">
+    <form method="post" class="form-doom">
+        <div class="input-group">
             <label for="nome">NOME:</label>
             <input type="text" id="nome" name="nome" placeholder="IDENTIFIQUE-SE" required>
         </div>
 
-        <div class="campo-grupo">
+        <div class="input-group">
             <label for="email">EMAIL:</label>
             <input type="email" id="email" name="email" placeholder="CANAL_DE_COMUNICACAO" required>
         </div>
 
-        <div class="campo-grupo">
+        <div class="input-group">
             <label for="mensagem">MENSAGEM:</label>
             <textarea id="mensagem" name="mensagem" placeholder="DIGITE O COMANDO..."></textarea>
         </div>
 
         <button type="submit" class="btn-doom">TRANSMITIR SINAL</button>
     </form>
-</div>
+</section>
 {% endblock %}
