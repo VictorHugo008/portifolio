@@ -1,29 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %}Contato - Operador Vitor{% endblock %}
-
 {% block content %}
-<section class="contato-container">
+<div class="contato-wrapper">
     <h1>SINAL_DE_CONTATO</h1>
-    <p class="status-log">// STATUS: AGUARDANDO ENTRADA DE DADOS...</p>
-
+    
     <form method="post" class="form-contato">
-        <div class="campo">
-            <label for="nome">IDENTIFICAÇÃO_OPERADOR</label>
-            <input type="text" id="nome" name="nome" placeholder="SEU NOME" required>
+        <div class="campo-grupo">
+            <label for="nome">NOME:</label>
+            <input type="text" id="nome" name="nome" placeholder="IDENTIFIQUE-SE" required>
         </div>
 
-        <div class="campo">
-            <label for="email">CANAL_DE_RESPOSTA</label>
-            <input type="email" id="email" name="email" placeholder="EMAIL@EXEMPLO.COM" required>
+        <div class="campo-grupo">
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" placeholder="CANAL_DE_COMUNICACAO" required>
         </div>
 
-        <div class="campo">
-            <label for="mensagem">TRANSMISSÃO_MENSAGEM</label>
+        <div class="campo-grupo">
+            <label for="mensagem">MENSAGEM:</label>
             <textarea id="mensagem" name="mensagem" placeholder="DIGITE O COMANDO..."></textarea>
         </div>
 
-        <button type="submit">TRANSMITIR SINAL</button>
+        <button type="submit" class="btn-doom">TRANSMITIR SINAL</button>
     </form>
-</section>
+</div>
 {% endblock %}
