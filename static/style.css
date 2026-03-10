@@ -1,120 +1,60 @@
-/* RESET GERAL */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #000 !important; /* Fundo preto em tudo */
-    color: #e63946; /* Vermelho padrão */
-    font-family: 'Impact', sans-serif;
-    line-height: 1.6;
+/* --- LAYOUT DO CONTEÚDO --- */
+.sobre-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* MENU SUPERIOR */
-header {
-    background-color: #0a0a0a;
-    border-bottom: 2px solid #e63946;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 15px #e63946;
-}
-
-nav a {
-    color: #e63946;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #e63946;
-}
-
-/* CONTEÚDO CENTRALIZADO */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Celular */
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-}
-
-/* TÍTULOS COM GLITCH */
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-shadow: 2px 2px #000, 0 0 10px #e63946;
-    margin-bottom: 30px;
-}
-
-/* FORMULÁRIO ESTILO DOOM */
-.form-doom {
-    background: #111;
-    padding: 30px;
-    border: 3px solid #e63946;
-    box-shadow: 0 0 30px rgba(230, 57, 70, 0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 50px;
+    max-width: 1100px;
     width: 100%;
-    max-width: 500px;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.input-group label {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #e63946;
-}
-
-.form-doom input, 
-.form-doom textarea {
-    background-color: #000 !important;
-    border: 2px solid #e63946 !important;
-    color: #fff !important;
-    padding: 12px;
-    font-family: 'Impact', sans-serif;
-    outline: none;
-}
-
-/* BOTÃO DE TRANSMISSÃO */
-.btn-doom {
-    background: linear-gradient(180deg, #e63946, #8b0000);
-    color: #fff;
-    border: none;
-    padding: 15px;
-    font-family: 'Impact', sans-serif;
-    font-size: 1.4rem;
-    cursor: pointer;
-    box-shadow: 0 0 15px #e63946;
-    text-transform: uppercase;
-}
-
-.btn-doom:hover {
-    background: #fff;
-    color: #e63946;
-    transform: scale(1.02);
-}
-
-/* RODAPÉ */
-footer {
-    border-top: 1px solid #e63946;
     padding: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+    .sobre-container {
+        flex-direction: row; /* PC */
+        text-align: left;
+    }
+}
+
+/* --- ESTILO DA FOTO --- */
+.foto img {
+    max-width: 380px;
+    width: 100%;
+    border: 3px solid #e63946;
+    /* Corte nos cantos estilo Doom */
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.4);
+}
+
+/* --- ESTILO DO TEXTO --- */
+.sobre h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #e63946;
+    text-shadow: 2px 2px #000, 0 0 10px #e63946;
+}
+
+.desc-principal {
+    background: rgba(230, 57, 70, 0.1);
+    border-left: 4px solid #e63946;
+    padding: 15px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-habilidades li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.lista-habilidades .label {
+    color: #e63946;
+    margin-right: 5px;
 }
