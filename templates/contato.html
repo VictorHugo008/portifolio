@@ -2,25 +2,26 @@
 
 {% block content %}
 <div class="contato-wrapper">
-    <h1>SINAL_DE_CONTATO</h1>
+    <h1>CONTATO</h1>
     
     <form method="post" class="form-doom">
         <div class="input-group">
-            <label>IDENTIFICAÇÃO_OPERADOR</label>
+            <label>USUÁRIO</label>
             <input type="text" name="nome" placeholder="SEU NOME" required>
         </div>
 
         <div class="input-group">
-            <label>CANAL_DE_RESPOSTA</label>
+            <label>RESPOSTA</label>
             <input type="email" name="email" placeholder="EMAIL@EXEMPLO.COM" required>
         </div>
 
         <div class="input-group">
-            <label>TRANSMISSÃO_MENSAGEM</label>
+            <label>MENSAGEM</label>
             <textarea name="mensagem" placeholder="DIGITE O COMANDO..."></textarea>
         </div>
 
-        <button type="submit" class="btn-doom">TRANSMITIR SINAL</button>
+        <button type="submit" class="btn-doom">ENVIAR</button>
     </form>
 </div>
 {% endblock %}
+
