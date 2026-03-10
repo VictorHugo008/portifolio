@@ -1,16 +1,19 @@
 {% extends "base.html" %}
+
 {% block content %}
 <div class="sobre-container">
     <div class="foto">
-        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Vitor">
+        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Victor">
     </div>
+
     <div class="sobre">
-        <h1>SISTEMA DO VICCTOR</h1>
-        <p>Desenvolvedor Python focado em <strong>Pygame</strong> e <strong>Flask</strong>. Unindo design brutalista com código eficiente.</p>
+        <h1>SISTEMA DO VICTOR</h1>
+        <p class="desc-principal">Desenvolvedor Python focado em <strong>Pygame</strong> e <strong>Flask</strong>. Conectando design brutalista a um código eficiente.</p>
+        
         <ul class="lista-habilidades">
-            <li><span>💻</span> <strong>SKILLS:</strong> Python, Flask, HTML, CSS</li>
-            <li><span>🎮</span> <strong>INTERESSES:</strong> RPG, Game Dev, Cybersec</li>
-            <li><span>📍</span> <strong>LOCAL:</strong> Serra, ES - Brasil</li>
+            <li><span class="emoji">💻</span> <strong class="label">HABILIDADES:</strong> Python, Flask, HTML, CSS</li>
+            <li><span class="emoji">🎮</span> <strong class="label">INTERESSES:</strong> RPG, Game Dev, Cybersec</li>
+            <li><span class="emoji">📍</span> <strong class="label">LOCALIZAÇÃO:</strong> Serra, ES - Brasil</li>
         </ul>
     </div>
 </div>
