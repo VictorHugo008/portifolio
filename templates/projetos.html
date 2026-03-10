@@ -1,12 +1,18 @@
 {% extends "base.html" %}
-
-{% block title %}Projetos{% endblock %}
-
 {% block content %}
-<h1>Meus Projetos</h1>
-<ul>
-    <li>Projeto 1 - Jogo: Quiz de Informática</li>
-    <li>Projeto 2 - Aplicativo de tarefas</li>
-    <li>Projeto 3 - API em Flask</li>
-</ul>
+<h1>[ MISSÕES_EXECUTADAS ]</h1>
+<div class="grid-projetos">
+    <div class="card-projeto">
+        <div class="badge-tech">PYTHON / PYGAME</div>
+        <h3>Balanced Individual 2D</h3>
+        <p>Motor de física e combate equilibrado para ambientes 2D.</p>
+        <a href="#" class="btn-link">[ ABRIR_REPOSITÓRIO ]</a>
+    </div>
+    <div class="card-projeto">
+        <div class="badge-tech">LORE / RPG</div>
+        <h3>Aethelgard System</h3>
+        <p>Sistema de regras e world-building para campanhas de RPG.</p>
+        <a href="#" class="btn-link">[ VER_DATABASE ]</a>
+    </div>
+</div>
 {% endblock %}
