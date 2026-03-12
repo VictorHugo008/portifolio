@@ -1,25 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}PORTFOLIO DO VICTOR {% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="{{ url_for('index') }}">INÍCIO</a>
-            <a href="{{ url_for('projetos') }}">PROJETOS</a>
-            <a href="{{ url_for('contato') }}">CONTATO</a>
-        </nav>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    <footer>
-        <p>// © 2026 - OPERADOR: VICTOR</p>
-    </footer>
-</body>
-</html>
+{% extends "base.html" %}
 
+{% block content %}
+<div class="main-content">
+    <h1 class="welcome-title">Bem-vindo ao meu Portfólio!</h1>
+    <p class="subtitle">Sou Victor, desenvolvedor apaixonado por tecnologia e inovação.</p>
+
+    <div class="content-flex">
+        <div class="photo-section">
+            <h2>Minha foto:</h2>
+            <div class="photo-border">
+                <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Victor">
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="text-block">
+                <h2>Sobre mim</h2>
+                <p>Tenho experiência em desenvolvimento web e gosto de criar projetos que unem design impactante com um código eficiente. Sou apaixonado por tecnologia, games e sempre busco aprender coisas novas.</p>
+            </div>
+
+            <div class="text-block">
+                <h2>Informações adicionais:</h2>
+                <ul class="skills-list">
+                    <li>💻 <strong>Habilidades:</strong> Python, Flask, HTML, CSS</li>
+                    <li>🎮 <strong>Interesses:</strong> Games, Treadmill, Cybersecurity</li>
+                    <li>📍 <strong>Localização:</strong> Serra, Espírito Santo - Brasil</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
