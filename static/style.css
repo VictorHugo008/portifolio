@@ -1,95 +1,104 @@
-/* FORÇAR FUNDO PRETO EM TUDO */
-html, body {
-    background-color: #000 !important;
-    color: #e63946 !important;
+/* RESET E FUNDO */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Impact', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000 !important;
+    color: #fff;
+    font-family: Arial, sans-serif;
     min-height: 100vh;
 }
 
-/* MENU E LINKS */
+/* MENU */
 header {
-    background: #0a0a0a;
-    padding: 20px;
-    border-bottom: 2px solid #e63946;
+    background: #000;
+    padding: 15px;
+    border-bottom: 1px solid #e63946;
     text-align: center;
 }
 
 nav a {
-    color: #e63946 !important;
+    color: #e63946;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1.2rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-nav a:hover {
-    color: #fff !important;
-    text-shadow: 0 0 10px #e63946;
-}
-
-/* LAYOUT LADO A LADO */
-.sobre-container {
-    display: flex;
-    flex-direction: row; /* Força ficar lado a lado no PC */
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 60px 20px;
+/* ESTRUTURA LADO A LADO */
+.main-content {
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* FOTO ESTILO DOOM */
-.foto img {
-    max-width: 400px;
-    width: 100%;
-    border: 3px solid #e63946;
-    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
-    box-shadow: 0 0 20px #e63946;
+.welcome-title {
+    color: #e63946;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* TEXTO */
-.sobre {
+.content-flex {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
     text-align: left;
-    max-width: 600px;
 }
 
-.sobre h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px #000, 0 0 15px #e63946;
-}
-
-.desc-principal {
-    background: rgba(230, 57, 70, 0.1);
-    border-left: 5px solid #e63946;
-    padding: 20px;
-    color: #fff;
-    margin-bottom: 25px;
-    font-family: Arial, sans-serif;
-}
-
-.lista-habilidades {
-    list-style: none;
-    padding: 0;
-}
-
-.lista-habilidades li {
-    font-size: 1.3rem;
+/* SEÇÃO DA FOTO */
+.photo-section h2 {
+    color: #e63946;
     margin-bottom: 15px;
 }
 
-.label {
+.photo-border {
+    border: 3px solid #e63946;
+    padding: 5px;
+    display: inline-block;
+    box-shadow: 0 0 15px #e63946;
+}
+
+.photo-border img {
+    max-width: 300px;
+    display: block;
+}
+
+/* BLOCOS DE TEXTO (IGUAL AO VÍDEO) */
+.info-section {
+    flex: 1;
+}
+
+.text-block {
+    background-color: rgba(230, 57, 70, 0.2); /* Fundo avermelhado do vídeo */
+    border-left: 5px solid #e63946;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.text-block h2 {
+    color: #e63946;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+.skills-list strong {
     color: #e63946;
 }
 
-/* RESPONSIVO PARA CELULAR */
+/* CELULAR */
 @media (max-width: 768px) {
-    .sobre-container {
+    .content-flex {
         flex-direction: column;
-        text-align: center;
     }
-    .sobre { text-align: center; }
 }
