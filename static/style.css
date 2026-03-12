@@ -1,60 +1,81 @@
-/* --- LAYOUT DO CONTEÚDO --- */
-.sobre-container {
-    display: flex;
-    flex-direction: column; /* Celular */
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    width: 100%;
-    padding: 20px;
+/* RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-    .sobre-container {
-        flex-direction: row; /* PC */
-        text-align: left;
-    }
-}
-
-/* --- ESTILO DA FOTO --- */
-.foto img {
-    max-width: 380px;
-    width: 100%;
-    border: 3px solid #e63946;
-    /* Corte nos cantos estilo Doom */
-    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
-    box-shadow: 0 0 25px rgba(230, 57, 70, 0.4);
-}
-
-/* --- ESTILO DO TEXTO --- */
-.sobre h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+body {
+    background-color: #000 !important;
     color: #e63946;
-    text-shadow: 2px 2px #000, 0 0 10px #e63946;
+    font-family: 'Impact', sans-serif;
+    text-align: center;
 }
 
-.desc-principal {
-    background: rgba(230, 57, 70, 0.1);
-    border-left: 4px solid #e63946;
-    padding: 15px;
-    margin-bottom: 30px;
+/* MENU */
+header {
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-bottom: 2px solid #e63946;
+}
+
+nav a {
+    color: #e63946;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* FORMULÁRIO (Igual ao vídeo) */
+.form-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #e63946;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato label {
+    text-align: left;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.form-contato input, .form-contato textarea {
+    background: transparent;
+    border: 1px solid #e63946;
     color: #fff;
-    font-family: sans-serif;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-contato button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* PÁGINA INICIAL */
+.sobre-container {
+    padding: 50px 20px;
+}
+
+.foto img {
+    max-width: 300px;
+    border: 2px solid #e63946;
+    margin-bottom: 20px;
 }
 
 .lista-habilidades {
     list-style: none;
-    padding: 0;
-}
-
-.lista-habilidades li {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.lista-habilidades .label {
-    color: #e63946;
-    margin-right: 5px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
 }
