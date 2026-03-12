@@ -2,23 +2,29 @@
 
 {% block content %}
 <div class="contato-central">
-    <h1 style="color: #e63946; font-size: 3rem; text-shadow: 0 0 10px #ff0000;">SINAL_DE_CONTATO</h1>
+    <h1 class="titulo-doom">SINAL_DE_CONTATO</h1>
     
     {% if sucesso %}
-        <p style="color: #00ff00; margin-bottom: 20px;">>> MENSAGEM TRANSMITIDA COM SUCESSO!</p>
+        <div class="status-alerta">>> TRANSMISSÃO CONCLUÍDA.</div>
     {% endif %}
 
-    <form method="POST" class="form-doom">
-        <label style="color: #e63946; text-align: left;">ID_OPERADOR:</label>
-        <input type="text" name="nome" placeholder="Seu Nome" required>
+    <form method="POST" action="/contato" class="form-doom">
+        <div class="campo">
+            <label>ID_OPERADOR</label>
+            <input type="text" name="nome" placeholder="NOME" required>
+        </div>
 
-        <label style="color: #e63946; text-align: left;">CANAL_RESPOSTA:</label>
-        <input type="email" name="email" placeholder="seu@email.com" required>
+        <div class="campo">
+            <label>CANAL_FREQUENCIA</label>
+            <input type="email" name="email" placeholder="EMAIL" required>
+        </div>
 
-        <label style="color: #e63946; text-align: left;">DADOS:</label>
-        <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+        <div class="campo">
+            <label>MENSAGEM_CRIPTOGRAFADA</label>
+            <textarea name="mensagem" placeholder="DIGITE O COMANDO..." required></textarea>
+        </div>
 
-        <button type="submit" class="btn-doom">TRANSMITIR SINAL</button>
+        <button type="submit" class="btn-doom">TRANSMITIR AGORA</button>
     </form>
 </div>
 {% endblock %}
