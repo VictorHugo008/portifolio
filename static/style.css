@@ -1,123 +1,113 @@
-/* CONFIGURAÇÕES GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Container Central */
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
 }
 
-body {
-    background-color: #000 !important; /* Fundo preto absoluto */
-    color: #fff;
-    font-family: 'Impact', sans-serif; /* Fonte com peso */
-    min-height: 100vh;
-}
-
-/* MENU */
-header {
-    background: #000;
-    padding: 15px;
-    border-bottom: 2px solid #e63946;
-}
-
-nav a {
+/* O Título com sombra vermelha */
+.glitch-title {
+    font-size: 3rem;
     color: #e63946;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin-bottom: 10px;
     text-transform: uppercase;
+    text-shadow: 2px 2px #000, -1px -1px #ff0000;
 }
 
-/* CONTEÚDO PRINCIPAL */
-.main-content {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+.desc-log {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+/* O FORMULÁRIO "BLINDADO" (Com Brilho Pulsante) */
+.form-doom {
+    display: flex;
+    flex-direction: column; /* Coloca um item embaixo do outro */
+    gap: 20px;
+    background: #111;
+    padding: 30px;
+    border: 3px solid #e63946;
+    width: 100%;
+    max-width: 550px; /* Largura fixa no PC */
+    animation: pulseGlow 3s infinite; /* EFEITO 1: Brilho Pulsante */
+}
+
+/* Grupos de Input */
+.input-group {
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 
-.welcome-title {
+.input-group label {
+    font-size: 0.9rem;
     color: #e63946;
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px #000;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 
-.subtitle {
-    color: #ccc;
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-}
-
-.content-flex {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-/* SEÇÃO DA FOTO */
-.section-label {
-    color: #e63946;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.photo-border {
-    border: 4px solid #e63946; /* Borda grossa vermelha */
-    padding: 0;
-    line-height: 0;
-    display: inline-block;
-    box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
-}
-
-.photo-border img {
-    max-width: 350px;
-    display: block;
-}
-
-/* BLOCOS DOOM SLAYER */
-.info-section {
-    flex: 1;
-    min-width: 300px;
-}
-
-.doom-block {
-    background-color: rgba(230, 57, 70, 0.15); /* Fundo vermelho escuro suave */
-    border-left: 6px solid #e63946; /* Barra lateral vermelha */
-    padding: 20px;
-    margin-bottom: 25px;
-}
-
-.doom-block h2 {
-    color: #e63946;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-}
-
-.doom-block p {
-    line-height: 1.6;
-    color: #eee;
-    font-family: Arial, sans-serif;
-}
-
-.skills-list {
-    list-style: none;
-    font-family: Arial, sans-serif;
-}
-
-.skills-list li {
-    margin-bottom: 10px;
+/* FORÇAR FUNDO PRETO NOS CAMPOS */
+.form-doom input, 
+.form-doom textarea {
+    background-color: #000 !important; /* Mata o fundo branco feio */
+    border: 2px solid #e63946 !important;
+    color: #fff !important; /* Letra branca para ler */
+    padding: 15px;
+    font-family: 'Impact', sans-serif;
     font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+    width: 100%;
 }
 
-.skills-list strong {
+.form-doom textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+/* EFEITO 2: Brilho ao clicar no campo */
+.form-doom input:focus, 
+.form-doom textarea:focus {
+    outline: none;
+    box-shadow: 0 0 20px #e63946, inset 0 0 5px #ff0000;
+    border-color: #fff !important;
+}
+
+/* BOTÃO DE TRANSMISSÃO CENTRALIZADO */
+.btn-doom {
+    background: linear-gradient(180deg, #e63946, #8b0000);
+    color: #fff;
+    border: none;
+    padding: 18px;
+    font-family: 'Impact', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    box-shadow: 0 0 15px #e63946;
+    transition: 0.3s;
+}
+
+/* EFEITO 3: Botão cresce e brilha no hover */
+.btn-doom:hover {
+    background: #fff;
     color: #e63946;
+    box-shadow: 0 0 35px #ff0000;
+    transform: scale(1.03);
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    .content-flex {
-        flex-direction: column;
-        align-items: center;
-    }
+/* ANIMAÇÃO DE PULSAÇÃO DO FORMULÁRIO */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px #e63946; }
+    50% { box-shadow: 0 0 35px #ff0000; }
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 600px) {
+    .glitch-title { font-size: 2rem; }
+    .form-doom { padding: 20px; }
 }
