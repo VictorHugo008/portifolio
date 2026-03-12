@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Entre em contato</h1>
-<form method="POST" action="/contato" class="form-contato">
-    <label>NOME:</label>
-    <input type="text" name="nome" required>
+<section class="contato-container">
+    <h1 class="glitch-title">SINAL_DE_CONTATO</h1>
+    <p class="desc-log">>> Transmissão via satélite autorizada... [OK]</p>
+    
+    <form method="post" class="form-doom">
+        <div class="input-group">
+            <label for="nome">NOME_DO_OPERADOR:</label>
+            <input type="text" id="nome" name="nome" placeholder="IDENTIFIQUE-SE" required>
+        </div>
 
-    <label>EMAIL:</label>
-    <input type="email" name="email" required>
+        <div class="input-group">
+            <label for="email">CANAL_DE_RESPOSTA:</label>
+            <input type="email" id="email" name="email" placeholder="EMAIL@EXEMPLO.COM" required>
+        </div>
 
-    <label>MENSAGEM:</label>
-    <textarea name="mensagem" rows="5" required></textarea>
+        <div class="input-group">
+            <label for="mensagem">TRANSMISSÃO_MENSAGEM:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="DIGITE O COMANDO..."></textarea>
+        </div>
 
-    <button type="submit">ENVIAR</button>
-</form>
+        <button type="submit" class="btn-doom">TRANSMITIR SINAL</button>
+    </form>
+</section>
 {% endblock %}
