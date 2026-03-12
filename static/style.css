@@ -1,48 +1,82 @@
-/* Centraliza o formulário na tela */
+/* Container de Contato */
 .contato-central {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 60px 20px;
+    background-color: #000 !important;
 }
 
-/* O Formulário com Brilho Neon */
+.titulo-doom {
+    color: #e63946;
+    font-size: 3rem;
+    text-shadow: 0 0 15px #ff0000;
+    margin-bottom: 20px;
+    font-family: 'Impact', sans-serif;
+}
+
+/* Formulário com Efeito de Pulsação */
 .form-doom {
-    background: #0a0a0a;
-    border: 3px solid #e63946;
+    background: #050505;
+    border: 2px solid #e63946;
     padding: 40px;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     display: flex;
-    flex-direction: column; /* Um campo embaixo do outro */
+    flex-direction: column;
     gap: 20px;
-    box-shadow: 0 0 30px rgba(230, 57, 70, 0.4); /* Efeito de brilho */
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.4);
 }
 
-/* Força os inputs a ficarem pretos e com letra branca */
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    color: #e63946;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Forçar Inputs Pretos (Resolve o fundo branco da imagem) */
 .form-doom input, .form-doom textarea {
-    background-color: #000 !important;
-    border: 2px solid #e63946 !important;
+    background: #000 !important;
+    border: 1px solid #e63946 !important;
     color: #fff !important;
-    padding: 15px;
-    font-family: 'Courier New', monospace;
-    width: 100%;
+    padding: 12px;
+    outline: none;
+    transition: 0.3s;
 }
 
-/* Botão de Transmissão Estilizado */
+.form-doom input:focus, .form-doom textarea:focus {
+    box-shadow: 0 0 10px #ff0000;
+    border-color: #fff !important;
+}
+
+/* Botão de Transmissão */
 .btn-doom {
-    background: linear-gradient(180deg, #e63946, #8b0000);
+    background: #e63946;
     color: #fff;
     border: none;
     padding: 15px;
     font-weight: bold;
-    text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 0 15px #e63946;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #e63946;
 }
 
 .btn-doom:hover {
     background: #fff;
     color: #e63946;
-    box-shadow: 0 0 25px #fff;
+    box-shadow: 0 0 20px #fff;
+}
+
+.status-alerta {
+    color: #00ff00;
+    font-family: monospace;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #00ff00;
 }
