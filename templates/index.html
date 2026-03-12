@@ -1,20 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="sobre-container">
-    <div class="foto">
-        <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Victor">
-    </div>
+<div class="main-content">
+    <h1 class="welcome-title">Bem-vindo ao meu Portfólio!</h1>
+    <p class="subtitle">Sou Victor, desenvolvedor apaixonado por tecnologia e inovação.</p>
 
-    <div class="sobre">
-        <h1>SISTEMA DO VICTOR</h1>
-        <p class="desc-principal">Desenvolvedor Python focado em <strong>Pygame</strong> e <strong>Flask</strong>. Conectando design brutalista a um código eficiente.</p>
-        
-        <ul class="lista-habilidades">
-            <li><span class="emoji">💻</span> <strong class="label">HABILIDADES:</strong> Python, Flask, HTML, CSS</li>
-            <li><span class="emoji">🎮</span> <strong class="label">INTERESSES:</strong> RPG, Game Dev, Cybersec</li>
-            <li><span class="emoji">📍</span> <strong class="label">LOCALIZAÇÃO:</strong> Serra, ES - Brasil</li>
-        </ul>
+    <div class="content-flex">
+        <div class="photo-section">
+            <h2 class="section-label">Minha foto:</h2>
+            <div class="photo-border">
+                <img src="{{ url_for('static', filename='img/imagem2.png') }}" alt="Victor">
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="doom-block">
+                <h2>Sobre mim</h2>
+                <p>Tenho experiência em desenvolvimento web e gosto de criar projetos que unem design impactante com um código eficiente. Sou apaixonado por tecnologia, games e sempre busco aprender coisas novas.</p>
+            </div>
+
+            <div class="doom-block">
+                <h2>Informações adicionais:</h2>
+                <ul class="skills-list">
+                    <li>💻 <strong>Habilidades:</strong> Python, Flask, HTML, CSS</li>
+                    <li>🎮 <strong>Interesses:</strong> Games, Treadmill, Cybersecurity</li>
+                    <li>📍 <strong>Localização:</strong> Serra, Espírito Santo - Brasil</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
