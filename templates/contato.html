@@ -1,27 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="contato-wrapper">
-    <h1>CONTATO</h1>
-    
-    <form method="post" class="form-doom">
-        <div class="input-group">
-            <label>USUÁRIO</label>
-            <input type="text" name="nome" placeholder="SEU NOME" required>
-        </div>
+<h1>Entre em contato</h1>
+<form method="POST" action="/contato" class="form-contato">
+    <label>NOME:</label>
+    <input type="text" name="nome" required>
 
-        <div class="input-group">
-            <label>RESPOSTA</label>
-            <input type="email" name="email" placeholder="EMAIL@EXEMPLO.COM" required>
-        </div>
+    <label>EMAIL:</label>
+    <input type="email" name="email" required>
 
-        <div class="input-group">
-            <label>MENSAGEM</label>
-            <textarea name="mensagem" placeholder="DIGITE O COMANDO..."></textarea>
-        </div>
+    <label>MENSAGEM:</label>
+    <textarea name="mensagem" rows="5" required></textarea>
 
-        <button type="submit" class="btn-doom">ENVIAR</button>
-    </form>
-</div>
+    <button type="submit">ENVIAR</button>
+</form>
 {% endblock %}
-
